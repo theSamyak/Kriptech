@@ -1,0 +1,202 @@
+/*****************************
+  Case Study
+*****************************/
+
+.case-study {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  .case-study-title {
+    display: block;
+    color: $gray-8;
+    font-size: 18px;
+    font-weight: 600;
+    &:hover {
+      color: $primary;
+    }
+  }
+  .case-study-services {
+    display: block;
+    margin-bottom: 10px;
+    &:hover {
+      color: $white;
+    }
+  }
+  .case-study-img {
+    background-size: cover;
+    min-height: 249px;
+    border-radius: $border-radius;
+    background-position: center center;
+  }
+  .case-study-img.case-study-lg {
+    min-height: 530px;
+  }
+  .case-study-info {
+    padding: 20px;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    bottom: -90px;
+    z-index: 2;
+    opacity: 0;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, 0%);
+    background: $white;
+    p {
+      max-height: 66px;
+      overflow: auto;
+    }
+  }
+  &:hover {
+    .case-study-info {
+      opacity: 1;
+      bottom: 20px;
+    }
+  }
+  .case-study-lg {
+    + {
+      .case-study-info {
+        p {
+          max-height: 340px;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+/* style 02 */
+.case-study-style-02 {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    background: rgba($gray-9, 0.85);
+    content: "";
+    transition: all 0.5s ease;
+    border-radius: 5px;
+  }
+  &:hover {
+    &:before {
+      bottom: 0;
+      height: 100%;
+    }
+  }
+  .case-study-title {
+    color: $white;
+  }
+  .case-study-info {
+    background: transparent;
+    p {
+      color: $white;
+    }
+  }
+}
+
+.clients-detail {
+  margin: 0;
+  li {
+    padding-right: 150px;
+    margin-top: 20px;
+    &:last-child {
+      padding-right: 0px;
+    }
+  }
+}
+
+
+.case-study-style-03 {
+  overflow: hidden;
+  
+  .case-study-img {
+    transition: transform .5s ease-in-out;
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .case-study-info {
+    padding: inherit;
+    width: inherit;
+    position: relative;
+    left: inherit;
+    bottom: inherit;
+    z-index: 2;
+    opacity: inherit;
+    border-radius: inherit;
+    transform: inherit;
+    background: $white;
+    padding-top: 20px;
+  }
+
+  &:hover {
+    .case-study-info {
+      bottom: inherit;
+      height: 100%;
+      transition: transform .5s ease-in-out;
+    }
+
+    .case-study-img {
+      transform: scale(1.07);
+      transition: transform .5s ease-in-out;
+    }
+
+  }
+
+  .case-study-services {
+    &:hover {
+      color: $primary;
+    }
+
+  }
+
+}
+
+/* Responsive View */
+
+@Media (max-width: 1199px) {
+
+  .clients-detail li {
+        padding-right: 110px;
+    }
+
+}
+
+
+@Media (max-width: 991px) {
+	.case-study .case-study-info {
+		padding: 20px;
+	}
+
+  .clients-detail li {
+        padding-right: 50px;
+    }
+
+
+}
+
+
+@Media (max-width: 767px) {
+
+    .clients-detail li {
+        padding-right: 50px;
+        width: 50%;
+        float: left;
+    }
+
+}
+
+@Media (max-width: 575px) {
+
+    .clients-detail li {
+        padding-right: 0px;
+        width: 100;
+        float: none;
+    }
+
+}

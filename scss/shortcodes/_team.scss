@@ -1,0 +1,109 @@
+/*****************************
+	Team
+*****************************/
+
+.team {
+	text-align: center;
+	position: relative;
+	.team-img {
+		img {
+			border-radius: $border-radius;
+		}
+	}
+	&:hover {
+		.team-img {
+			z-index: 9;
+			position: relative;
+		}
+		.team-info {
+			z-index: 9;
+			position: relative;
+			ul {
+				opacity: 1;
+				bottom: -35px;
+			}
+		}
+		.team-bg {
+			opacity: 1;
+			z-index: 5;
+		}
+	}
+	.team-info {
+		padding: 20px 0px 0px;
+		.team-name {
+			color: $gray-8;
+			font-size: 13px;
+			font-weight: 600;
+			&:hover {
+				color: $primary;
+			}
+		}
+		p {
+			font-size: 11px;
+			margin-bottom: 20px;
+		}
+		ul {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 0;
+			position: absolute;
+			bottom: -25px;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			transition: all 0.3s ease-in-out;
+			li {
+				margin: 0 12px;
+				a {
+					color: $gray-8;
+					&:hover {
+						color: $primary;
+					}
+				}
+			}
+		}
+	}
+	.team-bg {
+		background: $white;
+		position: absolute;
+		left: -10%;
+		top: -10%;
+		width: 120%;
+		height: 134%;
+		z-index: 4;
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		border-radius: $border-radius;
+		box-shadow: $boxshadow-lg;
+	}
+}
+
+.apply-position {
+	.team-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $gray-8;
+		padding: 0;
+		border-radius: 3px;
+		font-size: 110px;
+		min-height: 173px;
+		color: rgba($white, 0.1);
+	}
+	.btn {
+		padding: 0;
+		font-size: 13px;
+		&:after {
+			margin-left: 10px;
+		}
+	}
+}
+
+
+@Media (max-width: 575px) {
+
+	.team .team-img img {
+	    width: 100%;
+	}
+
+}

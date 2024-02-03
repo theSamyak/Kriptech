@@ -1,0 +1,174 @@
+/*****************************
+  banner
+*****************************/
+.banner h1{
+	color: $white;
+	font-size:72px;
+	line-height: 82px;
+	margin-bottom: 20px;
+}
+
+.banner h6{
+	color: $white;
+	margin-bottom: 30px;
+}
+
+.swiper-button-prev, .swiper-button-next{
+	background-image: none;
+	opacity: 0.5;
+	transition: all 0.3s ease-in-out;
+}
+
+.swiper-button-prev{
+	left: 10%;
+}
+
+.swiper-button-next{
+	right: 10%;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover{
+	opacity: 1;
+}
+
+.banner ul {
+    padding: 0;
+    margin: 30px 0 50px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.banner ul li {
+    display: inline-block;
+}
+
+.banner ul li a {
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    border-right: 2px solid $white;
+    padding: 0 15px;
+}
+
+.banner ul li a:hover{
+	color: $primary;
+}
+
+.banner ul li:last-child a {
+	border-right: 0;
+}
+
+/* banner 02 */
+.slider-02 .font-large {
+    font-size: 86px;
+    line-height: 100px;
+}
+
+.text-stroke-white {
+	color: transparent !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $white;
+  display: block;
+}
+
+.text-stroke-primary {
+    color: transparent !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $primary;
+  display: block;
+}
+
+.text-stroke-dark {
+    color: transparent !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $gray-9;
+  display: block;
+}
+
+
+/* banner 03 */
+.banner-logo {
+    padding: 10px 20px;
+    background: $primary;
+    flex: 0 0 240px;
+    border-radius: 7px;
+    color: $white;
+    font-size: 70px;
+    line-height: 60px;
+    position: relative;
+    align-self: center;
+    margin-left: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.banner-logo:before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 21px;
+    left: -30px;
+    border-top: 20px solid rgba($primary, 0);
+    border-right: 20px solid $primary;
+    top: 15px;
+}
+
+
+.banner {
+    .swiper-button-big {
+
+            .icon-btn {
+                font-size: 100px;
+                background: transparent;
+                font-weight: 500;
+            }
+    }
+}
+
+/*************************
+       Responsive
+*************************/
+
+@Media (max-width: 991px) {
+
+.banner h1 {
+    font-size: 66px;
+    line-height: 76px;
+    margin-bottom: 10px;
+}
+
+.slider-02 .font-large {
+    font-size: 66px;
+    line-height: 76px;
+}
+
+.swiper-button-prev{
+    left: 5%;
+}
+
+.swiper-button-next{
+    right: 5%;
+}
+
+}
+
+@Media (max-width: 767px) {
+
+.banner h1 {
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 10px;
+}
+
+.slider-02 .font-large {
+    font-size: 52px;
+    line-height: 60px;
+}
+
+.banner-logo {
+    width: auto;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+}

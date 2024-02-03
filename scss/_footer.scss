@@ -1,0 +1,141 @@
+/*****************************
+    Footer
+*****************************/
+.footer {
+.container-fluid {
+    padding: 0 100px;
+}
+
+.footer-link {
+    display: flex;
+    ul {
+        padding-right: 50px;
+        &:last-child {
+            padding-right: 0px;
+        }
+        li {
+            a {
+                color: $gray-6;
+                font-weight: 500;
+                padding: 7px 0px;
+                display: block;
+            }
+            &:hover {
+                a {
+                    color: $primary;
+                }
+            }
+            &:first-child {
+                a {
+                    padding-top: 0;
+                }
+            }
+            &:last-child {
+                a {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* Social icon */
+.social-icon {
+    li {
+        display: inline-block;
+        margin-right: 50px;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            font-size: 18px;
+            color: $gray-9;
+        }
+        &:hover {
+            a {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.footer-contact-info p{
+        color: $gray-6;
+        font-weight: 500;
+}
+
+.flag-svg{
+    height: 30px;
+}
+
+}
+
+
+.footer.bg-dark {
+.footer-link ul li a{
+    color: $white;
+
+    &:hover {
+        color: $primary;
+    }
+}
+ .social-icon li {
+        margin-right: 30px;
+a{
+    color: $white;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+}
+
+}
+
+
+/*************************
+       Responsive
+*************************/
+
+@Media (max-width: 767px) {
+
+.social-icon-lg li i{
+    font-size: 24px;
+}
+
+}
+
+@Media (max-width: 575px) {
+
+.footer-link {
+    display: block;
+    ul {
+        li {
+            &:first-child {
+                a {
+                    padding-top: 7px;
+                }
+            }
+            &:last-child {
+                a {
+                    padding-bottom: 7px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Social icon */
+    .social-icon {
+        li {
+            padding: 0 10px;
+            margin-right: 8px;
+            i {
+                font-size: 18px;
+            }
+        }
+    }
+}

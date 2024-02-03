@@ -1,0 +1,160 @@
+/*****************************
+  Pricing Table
+*****************************/
+
+.pricing-tab {
+  text-align: center;
+  span {
+    vertical-align: middle;
+  }
+  .monthly-tab {
+    font-weight: 700;
+    font-size: 18px;
+    color: $gray-8;
+  }
+  .yearly-tab {
+    font-weight: 700;
+    font-size: 18px;
+    color: $gray-8;
+  }
+  .pricing-tab-switcher {
+    height: 32px;
+    width: 60px;
+    background: $white;
+    display: inline-block;
+    border-radius: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    border: 2px solid $primary;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      background: $primary;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      transition: all 0.3s ease;
+    }
+  }
+  .pricing-tab-switcher.active {
+    &:before {
+      left: calc(100% - 24px);
+    }
+  }
+}
+
+
+.pricing {
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: $boxshadow-lg;
+  border-radius: $border-radius;
+  .pricing-title {
+    margin-bottom: 20px;
+  }
+  .pricing-price {
+    display: inline-block;
+    position: relative;
+    color: $gray-3;
+    font-weight: 600;
+    margin-top: 30px;
+    sup {
+      position: absolute;
+      top: 15px;
+      left: -20px;
+      font-size: 24px;
+      color: $gray-8;
+    }
+    strong {
+      color: $gray-8;
+      font-size: 70px;
+      line-height: 70px;
+      padding-right: 10px;
+      font-weight: 500;
+    }
+  }
+  .yearly-price {
+    display: none;
+  }
+  .change-pricing-price {
+    .yearly-price {
+      display: block;
+    }
+    .monthly-price {
+      display: none;
+    }
+  }
+  .pricing-list {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    li {
+      padding: 6px 0;
+      color: $gray-3;
+      font-weight: 600;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.pricing.active {
+  .pricing-list {
+    li {
+      color: $white;
+    }
+  }
+  background: $gray-9;
+  color: $white;
+  .pricing-title {
+    color: $white;
+  }
+  .pricing-price {
+    color: $white;
+  }
+  sup {
+    color: $white;
+  }
+  strong {
+    color: $primary;
+  }
+  .btn-round {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  .btn-light-round {
+    &:before {
+      background-color: $primary;
+      opacity: 1;
+    }
+  }
+}
+
+
+.switch {
+  .switch-btn {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 18px;
+      color: $gray-8;
+      font-weight: 600;
+    }
+  }
+  input {
+    display: none;
+  }
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin: 0px 15px;
+  position: relative;
+}
+

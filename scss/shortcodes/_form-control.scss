@@ -1,0 +1,267 @@
+/*****************************
+  Form Control
+*****************************/
+/* form-control */
+
+
+.form-control {
+  border: 1px solid $border-color;
+  border-radius: 0px;
+
+  padding: 10px 20px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 500;
+  background:$gray-1;
+  color: $gray-8;
+  border-radius: $border-radius;
+  background-clip: inherit !important;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $primary;
+  }
+
+}
+
+input.form-control {
+  height: 48px;
+}
+
+.form-control::-moz-placeholder {
+  color: $gray-5;
+}
+
+.form-control::-ms-input-placeholder {
+  color: $gray-5;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: $gray-5;
+}
+
+
+
+/* form-dark */
+
+.form-dark .form-control{
+  background-color: $gray-9;
+  color: $white;
+
+  &:focus {
+    box-shadow: $box-shadow;
+    border-color: $primary;
+  }
+}
+
+.form-white .form-control{
+  background-color: $white;
+  color: $white;
+
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.form-dark .form-control::-moz-placeholder {
+  color: $white;
+}
+
+.form-dark .form-control::-ms-input-placeholder {
+  color: $white;
+}
+
+.form-dark .form-control::-webkit-input-placeholder {
+  color: $white;
+}
+
+/* custom-file */
+.custom-file {
+  height: 50px;
+
+  .custom-file-input {
+    height: 50px;
+    color: $gray-8;
+    border-radius: $border-radius;
+    border-color: $border-color;
+
+    &:focus {
+      box-shadow: none;
+      border-color: $primary;
+    }
+
+  }
+
+  .custom-file-label {
+    height: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $gray-8;
+    border-color: $border-color;
+    padding: 15px 90px 15px 20px;
+    border-radius: $border-radius;
+
+    &:after {
+      height: 48px;
+      padding: 14px 25px;
+    }
+
+  }
+
+}
+
+.custom-file-input:focus~.custom-file-label {
+  box-shadow: none;
+  border-color: $primary;
+}
+
+/* input-group-prepend */
+.input-group-prepend,
+.input-group-append {
+  .input-group-text {
+    background: transparent;
+    border-color: $border-color;
+    box-shadow: none;
+    justify-content: center;
+  }
+
+}
+
+/* checkbox */
+.custom-control-input {
+  &:checked~.custom-control-label {
+    &:before {
+      background: $primary;
+      border-color: $primary;
+    }
+
+  }
+
+  &:not(:disabled) {
+    &:active~.custom-control-label {
+      &:before {
+        background: transparent;
+        border-color: transparent;
+      }
+
+    }
+
+  }
+
+  &:focus~.custom-control-label {
+    &:before {
+      box-shadow: none;
+    }
+
+  }
+
+  &:focus {
+    &:not(:checked)~.custom-control-label {
+      &:before {
+        border-color: $border-color;
+      }
+
+    }
+
+  }
+
+}
+
+.custom-control-label {
+  &:before {
+    top: 0px;
+  }
+
+  &:after {
+    top: 0px;
+  }
+
+}
+
+.custom-checkbox {
+  .custom-control-label {
+    &:before {
+      border-radius: $border-radius;
+      border: 2px solid $gray-2;
+    }
+
+  }
+
+}
+
+/* contact form */
+.contact-form-style-02 {
+  .inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    .label {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      font-size: 14px;
+      color: rgba($white, 0.5);
+      font-weight: 400;
+      transform-origin: 0 0;
+      transition: all 0.5s ease;
+    }
+    .border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background: $primary !important;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      transition: all 0.5s ease;
+      border: none !important;
+    }
+    .form-control {
+      -webkit-appearance: none;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 500;
+      border-bottom: 1px solid rgba($white, 0.1);
+      background: none;
+      border-radius: 0;
+      color: $white;
+      transition: all 0.5s ease;
+      &:hover {
+        background: rgba($gray-9,0.03);
+      }
+      &:not(:placeholder-shown) {
+        + {
+          span {
+            color: rgba($gray-8, 0.05);
+            transform: translateY(-16px) scale(0.75);
+            color: rgba($gray-8, 0.05);
+            transform: translateY(-16px) scale(0.75);
+            display: none;
+          }
+        }
+      }
+      &:focus {
+        background: none;
+        outline: none;
+        + {
+          span {
+            color: $white;
+            transform: translateY(-16px) scale(0.75);
+            opacity: 1;
+            + {
+              .border {
+                transform: scaleX(1);
+                border-color: $primary !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

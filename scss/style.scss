@@ -1,0 +1,101 @@
+/*
+
+Template: Kriptech - IT Solutions and Services Company HTML5 Template
+Version: 1.0
+Author: potenzaglobalsolutions
+Design and Developed by: potenzaglobalsolutions.com
+
+NOTE: This is main stylesheet of template, This file contains the styling for the actual Template.
+
+*/
+
+/*================================================
+[  Table of contents  ]
+================================================
+
+ :: Typography
+ :: Helper Classes
+ :: Shortcodes
+  	- Accordion
+  	- Button
+  	- Case Study
+    - Category
+    - Client
+    - Countdown
+    - Counter
+    - Feature Info
+    - Form Control
+    - List style
+    - Newsletter
+    - Owl Carousel
+    - Portfolio
+    - Pricing Table
+    - Progress Bar
+    - Tabs
+    - Team
+    - Testimonial
+    - Timeline
+ :: Header
+   - Header
+   - Header Style 02
+   - Header Style 03
+   - Header Transparent
+ :: Banner
+   - Banner
+   - banner 02
+   - banner 03
+ :: Layout
+   - Section Title
+   - Sticky column
+   - Header Inner
+ :: Blog
+   - Blog
+   - blog post sticky
+ :: Not Found
+ :: Footer
+ :: Responsive
+
+======================================
+[ End table content ]
+======================================*/
+
+
+
+// Core files
+@import "variables";
+@import "typography";
+@import "helpers";
+
+// Shortcodes
+@import "shortcodes/accordion";
+@import "shortcodes/feature-info";
+@import "shortcodes/team";
+@import "shortcodes/testimonial";
+@import "shortcodes/accordion";
+@import "shortcodes/newsletter";
+@import "shortcodes/counter";
+@import "shortcodes/tabs";
+@import "shortcodes/owl-carousel";
+@import "shortcodes/pricing";
+@import "shortcodes/countdown";
+@import "shortcodes/button";
+@import "shortcodes/case-study";
+@import "shortcodes/category";
+@import "shortcodes/client";
+@import "shortcodes/form-control";
+@import "shortcodes/portfolio";
+@import "shortcodes/timeline";
+@import "shortcodes/progress-bar";
+@import "shortcodes/list";
+
+// Structure
+@import "header";
+@import "banner";
+@import "layout";
+
+// Pages
+@import "blog";
+@import "footer";
+
+// Responsive
+@import "responsive";

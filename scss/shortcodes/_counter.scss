@@ -1,0 +1,62 @@
+/*****************************
+  Counter
+*****************************/
+.counter {
+	display: flex;
+	align-items: center;
+	padding: 20px 0px;
+	.counter-icon {
+		i {
+			color: $primary;
+			margin-right: 25px;
+			font-size: 70px;
+			line-height: 70px;
+		}
+	}
+	.counter-content {
+		align-self: center;
+		.timer {
+			position: relative;
+			font-size: 36px;
+			line-height: 36px;
+			font-weight: 700;
+			font-family: $font-hedding;
+			color: $white;
+			margin-bottom: 10px;
+			display: block;
+		}
+		label {
+			display: block;
+			color: $white;
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+/* Counter 02 */
+.counter.counter-02 {
+	.counter-content {
+		.timer {
+			color: $gray-8;
+		}
+		label {
+			color: $gray-3;
+		}
+	}
+	.counter-icon {
+		i {
+			color: $gray-2;
+		}
+	}
+}
+
+
+/* Counter 03 */
+.counter.counter-03 {
+    background: $primary;
+    padding: 32px;
+    text-align: center;
+    display: block;
+    border-radius: $border-radius;
+}

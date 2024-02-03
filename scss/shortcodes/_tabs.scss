@@ -1,0 +1,160 @@
+/*****************************
+	Tabs
+*****************************/
+
+.nav-pills {
+	.nav-link {
+		display: flex;
+		color: $gray-8;
+		font-size: 22px;
+		line-height: 1;
+		padding: 20px 0px;
+		font-weight: 600;
+		border-radius: 0;
+		position: relative;
+		&:hover {
+			color: $primary;
+			background: transparent;
+			&:after {
+				opacity: 1;
+				transition: all 0.5s ease-in-out;
+				right: 0;
+			}
+			.data-hover {
+				transform: translate3d(0px,0px,-30px) rotateX(90deg);
+			}
+		}
+		&:after {
+			content: '\f061';
+			font-family: "Font Awesome 5 Free";
+			font-weight: bold;
+			opacity: 0;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.data-hover {
+			display: block;
+			position: relative;
+			transition: .5s ease-in-out all;
+			transform-origin: 50% 0;
+			transform-style: preserve-3d;
+			width: 100%;
+			font-weight: 500;
+			span {
+				margin-right: 20px;
+			}
+			&:before {
+				display: block;
+				content: attr(data-title);
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: .5s ease-in-out all;
+				transform-origin: 50% 0;
+				transform: translate3d(0px,105%,0px) rotateX(-90deg);
+				font-weight: bold;
+				width: 100%;
+			}
+		}
+	}
+	.nav-link.active {
+		color: $primary;
+		background: transparent;
+		&:after {
+			opacity: 1;
+			transition: all 0.5s ease-in-out;
+			right: 0;
+		}
+		.data-hover {
+			transform: translate3d(0px,0px,-30px) rotateX(90deg);
+		}
+	}
+	.show {
+		>.nav- {
+			color: $primary;
+			background: transparent;
+		}
+		>.nav-link {
+			color: $primary;
+			background: transparent;
+		}
+	}
+}
+
+
+.nav-tabs.nav-tabs-02{
+	border: none;
+		.nav-link{
+			border: none;
+			color: $gray-8;
+			font-weight: 700;
+			background:$gray-1;
+			border-radius: $border-radius-50px;
+			margin-right: 10px;
+			padding: 12px 28px;
+			margin-bottom: 10px;
+		}
+		.nav-link.active{
+			color: $white;
+			background:$primary; 
+		}
+		.nav-link:hover{
+			color: $white;
+			background:$primary; 
+		}
+}
+
+
+@Media (max-width: 1199px) {
+	.nav-pills .nav-link {
+		font-size: 18px;
+	}
+
+}
+
+@Media (max-width: 991px) {
+	.nav-pills .nav-link {
+		font-size: 14px;
+	}
+
+}
+
+@Media (max-width: 767px) {
+	.accordion .accordion-icon.card-header button {
+		padding: 22px 20px 22px 52px;
+	}
+
+	.accordion .card-body {
+		padding: 25px 25px 35px 52px;
+	}
+
+	.nav-pills.flex-column {
+		flex-direction: inherit !important;
+	}
+
+	.nav-pills .nav-link {
+		padding: 0 25px 25px 0;
+		font-size: 16px;
+
+	}
+
+	.nav-pills .nav-link.active:after {
+		content: none;
+	}
+
+}
+
+@Media (max-width: 575px) {
+	.accordion .accordion-icon.card-header button {
+		font-size: 16px;
+		padding: 20px;
+		line-height: 22px;
+	}
+
+	.accordion .card-body {
+		padding: 20px;
+	}
+
+}

@@ -1,0 +1,105 @@
+/*****************************
+  Client
+*****************************/
+
+.our-clients {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .owl-stage {
+        display: flex;
+        height: 100%;
+    }
+    .item {
+        display: flex;
+        height: 100%;
+    }
+    .client-title {
+        flex: 0 0 16%;
+        h5 {
+            position: relative;
+            z-index: 9;
+            margin-bottom: 0;
+        }
+    }
+    .svg-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    .brand-logo {
+        flex: 0 0 64%;
+        overflow: hidden;
+        padding-right: 30px;
+    }
+    .client-btn {
+        flex: 0 0 20%;
+    }
+}
+
+
+/* style 02 */
+.our-clients-style-02 {
+    border-radius: $border-radius;
+    padding: 40px 0;
+
+    .svg-item {
+        border-radius: $border-radius;
+        width: 100%;
+        height: 100%;
+
+        &:before {
+            position: absolute;
+            left: -49px;
+            width: 200px;
+            height: 200px;
+            background: $primary;
+            content: "";
+            top: -30px;
+            border-radius: 100%;
+        }
+
+        &:after {
+            position: absolute;
+            left: 80px;
+            width: 70px;
+            height: 70px;
+            background: $primary;
+            content: "";
+            bottom: -40px;
+            border-radius: 100%;
+        }
+    }
+}
+
+
+
+@Media (max-width: 1199px) {
+
+.our-clients-style-02 {
+    display: block;
+    padding: 0;
+    .client-title {
+        padding-left: 20px;
+        padding: 20px;
+        background: $primary;
+    }
+    .svg-item {
+        display: none;
+    }
+    .brand-logo {
+        margin: 40px 20px;
+    }
+    .client-btn {
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+}
+
+
